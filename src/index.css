@@ -12,6 +12,12 @@ html {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+.page-title h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 .review {
     display: flex;
     flex-direction: column;
@@ -30,6 +36,7 @@ html {
     border-radius: 50%;
     box-shadow: 1px -1px 5px 0 rgb(27, 27, 27), 10px -5px 0 0 rgb(187, 75, 75);
     margin: 20px;
+    margin-bottom: 0;
 }
 
 .review-text {
@@ -41,12 +48,12 @@ html {
 
 .name {
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .review-text .role {
     font-weight: 500;
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: rgb(129, 51, 51);
     margin-top: -15px;
 }
@@ -106,7 +113,7 @@ html {
     margin-bottom: 20px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 500;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .surprise button:focus {
@@ -115,10 +122,25 @@ html {
 
 .surprise button:hover {
     animation-name: scaleAndRotate;
-    animation-duration: 800ms;
+    animation-duration: 1000ms;
     animation-iteration-count: 1;
 }
 
 @keyframes scaleAndRotate {
-    100% {transform: rotate(360deg);}
+    33% {transform: rotate(20deg);}
+    66% {transform: rotate(-20deg);}
+}
+
+@media (max-width: 700px) {
+    .page-title h1 {
+        font-size: 2em;   
+    }
+
+    .desc {
+        font-size: 0.9em;
+    }
+
+    .name {
+        font-size: 1.1em;
+    }
 }
